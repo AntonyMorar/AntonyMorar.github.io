@@ -1,0 +1,19 @@
+<section class="subscribe-form">
+    <h3 class="subscribe-form-title">Suscribete a {{@site.title}}</h3>
+    <p class="subscribe-form-description">Recibe las últimas publicaciones directamente a tu correo</p>
+    <form data-members-form="subscribe">
+        <div class="form-group">
+            <input class="subscribe-email" data-members-email placeholder="tuemail@ejemplo.com" autocomplete="false" />
+            <button class="button primary" type="submit">
+                <span class="button-content">Suscribirse</span>
+                <span class="button-loader">{{> "icons/loader"}}</span>
+            </button>
+        </div>
+        <div class="message-success">
+            <strong>Genial!</strong> Revisa tu bandeja de entrada y haz clic en el enlace para confirmar su suscripción..
+        </div>
+        <div class="message-error">
+            ¡Introduce una dirección de correo electrónico válida!
+        </div>
+    </form>
+</section>
