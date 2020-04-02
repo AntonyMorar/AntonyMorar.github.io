@@ -10,6 +10,7 @@ production stylesheet in assets/built/screen.css
 4.  Site Header
   4.1 Home header
   4.2 Archive header
+  4.3 Home gallery
 5.  Site Navigation
 6.  Post Feed
 7.  Single Post
@@ -76,6 +77,10 @@ body {
     margin: 0 auto;
     max-width: 1040px;
     width: 100%;
+}
+
+.header-offset{
+    margin-top: 64px;
 }
 
 /* Usage:
@@ -258,6 +263,36 @@ body {
 
     .site-archive-header .site-header-content {
         min-height: unset;
+    }
+}
+
+/* 4.2 Home Gallery
+/* ---------------------------------------------------------- */
+.site-home-gallery{
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.site-home-gallery-content{
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.video-container{
+    width: 50%;
+    position: relative;
+
+    background-color: yellow;
+    border: 3px solid black;
+    height: 300px;
+}
+
+@media (max-width: 768px){
+    .video-container{
+        width: 100%;
     }
 }
 

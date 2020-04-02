@@ -30,7 +30,7 @@
             <div class="site-footer-content inner">
                 <section class="copyright"><a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}</section>
                 <nav class="site-footer-nav">
-                    <a href="{{@site.url}}">Ultimos Posts</a>
+                    <a href="{{@site.url}}/blog">Ultimos Posts</a>
                     {{#if @site.facebook}}<a href="{{facebook_url @site.facebook}}" target="_blank" rel="noopener">Facebook</a>{{/if}}
                     {{#if @site.twitter}}<a href="{{twitter_url @site.twitter}}" target="_blank" rel="noopener">Twitter</a>{{/if}}
                 </nav>
@@ -53,14 +53,14 @@
                 <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
             {{/if}}
             <div class="subscribe-form">
-                <h1 class="subscribe-overlay-title">Suscribete a {{@site.title}}</h1>
+                <h1 class="subscribe-overlay-title">Suscríbete a {{@site.title}}</h1>
                 <p class="subscribe-overlay-description">Recibe las últimas y mejores publicaciones directamente en tu bandeja de entrada</p>
                 <form data-members-form="subscribe">
                     <div class="form-group">
                         <input class="subscribe-email" data-members-email placeholder="tuemail@ejemplo.com"
                             autocomplete="false" />
                         <button class="button primary" type="submit">
-                            <span class="button-content">Suscribete</span>
+                            <span class="button-content">Suscríbete</span>
                             <span class="button-loader">{{> "icons/loader"}}</span>
                         </button>
                     </div>

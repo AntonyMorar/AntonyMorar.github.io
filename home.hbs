@@ -3,24 +3,30 @@
 into the {body} of the default.hbs template --}}
 
 <header class="site-home-header">
-    <h1 class="site-title">
-        Blog
-    </h1>
+    {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
+        <div class="inner">
+            {{> "site-nav"}}
+            <div class="site-header-content">
+                <h1 class="site-title">Hola! Soy Antony.<br>Desarrollador y Diseñador.</h1>
+            </div>
+        </div>
+    </div>
 </header>
 
-{{!-- The main content area --}}
-<main id="site-main" class="site-main outer">
-    <div class="inner posts">
-
-        <div class="post-feed">
-            {{#foreach posts}}
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-            {{/foreach}}
+{{!-- The video gallery content area --}}
+<div class="site-home-gallery">
+    <div class="site-home-gallery-content">
+        <div class="video-container">
+            <video width="100%" height="100%"></video>
         </div>
+        <div class="video-container">
 
+        </div>
+        <div class="video-container">
+
+        </div>
     </div>
-</main>
+</div>
 
 {{> site-header}}
 
@@ -33,7 +39,7 @@ into the {body} of the default.hbs template --}}
     //   Dropping the scroll event and using only a raf loop results in smoother
     //   scrolling but continuous processing even when not scrolling
     $(document).ready(function () {
-
+        
         var nav = document.querySelector('.site-nav-main .site-nav');
         var feed = document.querySelector('.post-feed');
 
