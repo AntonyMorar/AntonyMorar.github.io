@@ -284,10 +284,103 @@ body {
 .video-container{
     width: 50%;
     position: relative;
+}
 
-    background-color: yellow;
-    border: 3px solid black;
-    height: 300px;
+.video-container .controls{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    z-index: 10;
+    cursor: pointer;
+    /*background-image: url(/media/portfolio/play-button-spritesheet.png);*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.video-container .controls:hover{
+    animation: play 0.55s steps(6) forwards;
+}
+
+@keyframes play
+{
+	to { background-position: -480px 0px; }
+}
+
+.video-container .loading{
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+    /*background-image: url(/media/portfolio/loading-spritesheet.png);*/
+    animation: loading 1.3s steps(12) infinite;
+    display: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes loading
+{
+	from { background-position: 0px 0px; }
+	to { background-position: -1536px 0px; }
+}
+
+.video-container .video-link{
+    z-index: 10;
+    cursor: pointer;
+    height: 36px;
+    width: 36px;
+    bottom: 15px;
+    right: 20px;
+    position: absolute;
+    background-size: cover;
+    background-position: -216px 0px;
+    /*background-image: url(/media/portfolio/hotlink-spritesheet.png);*/
+}
+
+.video-container .video-link:hover
+{
+	animation: link 0.2s steps(6) forwards;
+}
+
+@keyframes link
+{
+	from { background-position: 0px 0px; }
+	to { background-position: -216px 0px; }
+}
+
+.video-container video,
+.video-container iframe{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    display: block;
+    cursor: auto;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @media (max-width: 768px){

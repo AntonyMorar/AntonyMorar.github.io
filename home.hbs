@@ -3,13 +3,14 @@
 into the {body} of the default.hbs template --}}
 
 <header class="site-home-header">
-    {{> header-background background=@site.cover_image}} {{!--Special header-image.hbs partial to generate the background image--}}
-        <div class="inner">
-            {{> "site-nav"}}
-            <div class="site-header-content">
-                <h1 class="site-title">Hola! Soy Antony.<br>Desarrollador y Diseñador.</h1>
-            </div>
+    {{> header-background background=@site.cover_image}}
+    {{!--Special header-image.hbs partial to generate the background image--}}
+    <div class="inner">
+        {{> "site-nav"}}
+        <div class="site-header-content">
+            <h1 class="site-title">Hola! Soy Antony.<br>Desarrollador y Diseñador.</h1>
         </div>
+    </div>
     </div>
 </header>
 
@@ -17,15 +18,34 @@ into the {body} of the default.hbs template --}}
 <div class="site-home-gallery">
     <div class="site-home-gallery-content">
         <div class="video-container">
-            <video width="100%" height="100%"></video>
+            <div class="controls"
+                style="background-image: url({{asset '/media/portfolio/play-button-spritesheet.png'}});"></div>
+            <div class="loading" 
+            style="background-image: url({{asset '/media/portfolio/loading-spritesheet.png'}});">
+            </div>
+            <a class="video-link" target="_blank"
+                style="background-image: url({{asset '/media/portfolio/hotlink-spritesheet.png'}});"></a>
+            <video poster={{asset 'media/portfolio/PiratePakPoster.png'}} muted loop preload="metadata"
+                style="background-image: url({{asset 'media/portfolio/PiratePakPoster.png'}});">
+                <source src={{asset '/media/portfolio/Campfire.mp4'}} type="video/mp4">
+            </video>
         </div>
-        <div class="video-container">
 
-        </div>
         <div class="video-container">
-
+            <div class="controls"
+                style="background-image: url({{asset '/media/portfolio/play-button-spritesheet.png'}});"></div>
+            <div class="loading" style="background-image: url({{asset '/media/portfolio/loading-spritesheet.png'}});">
+            </div>
+            <a class="video-link" target="_blank"
+                style="background-image: url({{asset '/media/portfolio/hotlink-spritesheet.png'}});"></a>
+            <video poster={{asset 'media/portfolio/PiratePakPoster.png'}} muted loop preload="metadata"
+                style="background-image: url({{asset 'media/portfolio/PiratePakPoster.png'}});">
+                <source src={{asset '/media/portfolio/Campfire.mp4'}} type="video/mp4">
+            </video>
         </div>
+
     </div>
+</div>
 </div>
 
 {{> site-header}}
@@ -33,13 +53,8 @@ into the {body} of the default.hbs template --}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
 <script>
-
-    // NOTE: Scroll performance is poor in Safari
-    // - this appears to be due to the events firing much more slowly in Safari.
-    //   Dropping the scroll event and using only a raf loop results in smoother
-    //   scrolling but continuous processing even when not scrolling
     $(document).ready(function () {
-        
+
         var nav = document.querySelector('.site-nav-main .site-nav');
         var feed = document.querySelector('.post-feed');
 
@@ -85,6 +100,94 @@ into the {body} of the default.hbs template --}}
 
         update();
 
+    });
+</script>
+
+<script>
+    function pauseAllVideos() {
+        $("video").each(function () {
+            pauseVideo($(this));
+        });
+    }
+
+    function pauseVideo(jVideo) {
+        jVideo.siblings(".controls").first().show();
+        jVideo.css("cursor", "auto");
+        jVideo.get(0).pause();
+    }
+
+    // Set the background of all videos to match their poster
+    // This prevents a white flash from occurring immediately after load
+    $("video").each(function () {
+        $(this).css("background-image", 'url("' + $(this).attr("poster") + '")');
+    })
+
+    $(".controls").click(function () {
+        pauseAllVideos();
+
+        var jVideo = $(this).siblings("video").first();
+        var video = jVideo.get(0);
+
+        if (video.paused) {
+            if (video.readyState === 4) {
+                jVideo.css("cursor", "pointer");
+                video.play();
+            }
+            else {
+                video.addEventListener("canplay", function () {
+                    jVideo.css("cursor", "pointer");
+                    var loader = $(this).siblings(".loading").first();
+                    loader.hide();
+                    video.play();
+                }, false);
+
+                var loader = $(this).siblings(".loading").first();
+                loader.show();
+                video.load();
+            }
+
+            $(this).hide();
+        }
+        else {
+            video.pause();
+        }
+    });
+
+    $(".video-link").click(function () {
+        pauseAllVideos();
+    });
+
+    $("video").click(function () {
+        var video = $(this).get(0);
+
+        if (!video.paused) {
+            pauseVideo($(this));
+        }
+    });
+
+    $("video").each(function () {
+        var video = $(this).get(0);
+
+        video.addEventListener("waiting", function () {
+            if (video.currentTime != 0) {
+                var loader = $(this).siblings(".loading").first();
+                loader.show();
+            }
+        });
+
+        video.addEventListener("playing", function () {
+            var loader = $(this).siblings(".loading").first();
+            loader.hide();
+        }
+        );
+    });
+
+    $(".aside-button").click(function () {
+        $(this).parent().toggleClass("expanded");
+    });
+
+    $(".toggle-gif").click(function () {
+        $(this).toggleClass("playing");
     });
 </script>
 {{/contentFor}}
