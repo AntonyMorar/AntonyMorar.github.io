@@ -17,30 +17,17 @@ into the {body} of the default.hbs template --}}
 {{!-- The video gallery content area --}}
 <div class="site-home-gallery">
     <div class="site-home-gallery-content">
-        <div class="video-container">
-            <div class="controls"
-                style="background-image: url({{asset '/media/portfolio/play-button-spritesheet.png'}});"></div>
-            <div class="loading" 
-            style="background-image: url({{asset '/media/portfolio/loading-spritesheet.png'}});">
-            </div>
-            <a class="video-link" target="_blank"
-                style="background-image: url({{asset '/media/portfolio/hotlink-spritesheet.png'}});"></a>
-            <video poster={{asset 'media/portfolio/PiratePakPoster.png'}} muted loop preload="metadata"
-                style="background-image: url({{asset 'media/portfolio/PiratePakPoster.png'}});">
-                <source src={{asset '/media/portfolio/Campfire.mp4'}} type="video/mp4">
-            </video>
-        </div>
 
         <div class="video-container">
             <div class="controls"
                 style="background-image: url({{asset '/media/portfolio/play-button-spritesheet.png'}});"></div>
             <div class="loading" style="background-image: url({{asset '/media/portfolio/loading-spritesheet.png'}});">
             </div>
-            <a class="video-link" target="_blank"
+            <a href="https://play.google.com/store/apps/details?id=com.muegamo.inordie" class="video-link" target="_blank"
                 style="background-image: url({{asset '/media/portfolio/hotlink-spritesheet.png'}});"></a>
-            <video poster={{asset 'media/portfolio/PiratePakPoster.png'}} muted loop preload="metadata"
+            <video poster={{asset 'media/portfolio/inordie.png'}} muted loop preload="metadata"
                 style="background-image: url({{asset 'media/portfolio/PiratePakPoster.png'}});">
-                <source src={{asset '/media/portfolio/Campfire.mp4'}} type="video/mp4">
+                <source src={{asset '/media/portfolio/inordie.mp4'}} type="video/mp4">
             </video>
         </div>
 
