@@ -24,6 +24,7 @@ production stylesheet in assets/built/screen.css
 10. Subscribe Overlay
 11. Site Footer
 12. Dark Mode
+13. Contact
 
 */
 
@@ -399,7 +400,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color(var(--darkgrey) l(-5%));
+    background: color(var(--darkgrey) l(-1%));
 }
 
 .site-nav {
@@ -432,7 +433,7 @@ body {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%,color(var(--darkgrey) l(-5%)) 100%);
+    background: linear-gradient(to right, color(var(--darkgrey) l(-1%) a(0)) 0%,color(var(--darkgrey) l(-1%)) 100%);
 }
 
 .site-nav-left {
@@ -3157,4 +3158,40 @@ Usage (In Ghost editor):
     .subscribe-form .success .message-success {
         color: color(var(--green) l(+5%) s(-5%));
     }
+}
+
+/* 12. Dark Mode
+/* ---------------------------------------------------------- */
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label{
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    border: 1px solid #a5a5a5;
+    border-radius: 4px;
+    background-color: #eaeaea;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+.pink-button{
+    min-width: 150px;
+    max-width: 250px;
+    border-radius: 4px;
+    border: 4px;
+    padding: 10px 30px;
+    background-color: rgb(208,32,145);
+    color: white;
+    font-weight: bold;
+}
+
+.pink-button:hover{
+    transition: .3s;
+    background-color: rgb(233, 14, 156);
 }

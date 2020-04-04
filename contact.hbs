@@ -2,10 +2,34 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<header class="header-offset">
-    <h1 class="site-title">
-        Contacto
-    </h1>
-</header>
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+        <header class="header-offset">
+            <h1 class="site-title">
+                Contacto
+            </h1>
+        </header>
+        <div>
+            <p>Envíame un mensaje llenando el formulario. También puedes enviarme un mensaje por {{#if @site.twitter}}<a
+                    href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a> o
+                {{/if}}
+                <a href="https://www.reddit.com/user/antony999k" target="_blank" rel="noopener" href="">Reddit</a>.</p>
+        </div>
+
+        <form action="https://formspree.io/mlewdagv" method="POST" class="contact-form">
+            <label>
+                Tu correo
+            </label>
+            <input type="text" name="_replyto" required>
+            <label>
+                Tu Mensaje
+            </label>
+            <textarea name="message" rows="8" required></textarea>
+            <!-- your other form fields go here -->
+
+            <button type="submit" class="pink-button">Enviar</button>
+        </form>
+    </div>
+</main>
 
 {{> site-header}}
