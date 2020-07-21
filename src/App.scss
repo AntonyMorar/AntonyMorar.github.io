@@ -1,6 +1,9 @@
+@import 'variables';
+
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
+  color: $dark;
 }
 
 ol, ul {
