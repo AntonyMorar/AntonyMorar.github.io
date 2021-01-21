@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a9417eda.chunk.css",
+    "main.js": "/static/js/main.0bce9c39.chunk.js",
+    "main.js.map": "/static/js/main.0bce9c39.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1a7a0475.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1a7a0475.js.map",
+    "static/js/2.0f763a2d.chunk.js": "/static/js/2.0f763a2d.chunk.js",
+    "static/js/2.0f763a2d.chunk.js.map": "/static/js/2.0f763a2d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ab1f3d5e94bf53d24ca4d71beefa0e85.js": "/precache-manifest.ab1f3d5e94bf53d24ca4d71beefa0e85.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.a9417eda.chunk.css.map": "/static/css/main.a9417eda.chunk.css.map",
+    "static/js/2.0f763a2d.chunk.js.LICENSE.txt": "/static/js/2.0f763a2d.chunk.js.LICENSE.txt",
+    "static/media/DefaultProject.scss": "/static/media/LeagueSpartan-Bold.a6509aa3.otf",
+    "static/media/SolarSystemGif.gif": "/static/media/SolarSystemGif.6f90b88e.gif",
+    "static/media/bodyrescue.png": "/static/media/bodyrescue.5eea0e78.png",
+    "static/media/happytetris.png": "/static/media/happytetris.901c967d.png",
+    "static/media/happytetrisBG.png": "/static/media/happytetrisBG.bf097ccd.png",
+    "static/media/inordie.png": "/static/media/inordie.b94e91aa.png",
+    "static/media/kip.png": "/static/media/kip.5c294e92.png",
+    "static/media/neonwars.png": "/static/media/neonwars.b2b361a4.png",
+    "static/media/neonwarsBG.png": "/static/media/neonwarsBG.e29b9671.png",
+    "static/media/solarsystem.png": "/static/media/solarsystem.842b6653.png",
+    "static/media/solarsystemBG.png": "/static/media/solarsystemBG.645a8197.png",
+    "static/media/viewOnGithub.png": "/static/media/viewOnGithub.aca990ba.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a7a0475.js",
+    "static/js/2.0f763a2d.chunk.js",
+    "static/css/main.a9417eda.chunk.css",
+    "static/js/main.0bce9c39.chunk.js"
+  ]
+}
