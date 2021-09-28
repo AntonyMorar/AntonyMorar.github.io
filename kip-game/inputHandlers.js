@@ -61,6 +61,11 @@ function gameEvents(game) {
         game.playBtnSound();
         game.toggleInstructions();
     });
+
+    document.getElementById("warning").addEventListener("click", () => {
+        game.playBtnSound();
+        document.getElementById("warning").classList.add('close');
+    });
     document.getElementById('modal').addEventListener('click', e => e.stopPropagation());
 }
 
