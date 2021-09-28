@@ -512,12 +512,7 @@ figure {
 	-o-transition: 0.3s;
 	transition: 0.3s;
 }
-@media screen and (max-width: 768px) {
-	.work .work-grid .inner {
-		opacity: 1;
-		background: rgba(237, 235, 232, 0.7);
-	}
-}
+
 .work .work-grid .inner .desc {
 	display: table-cell;
 	vertical-align: middle;
