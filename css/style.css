@@ -1373,12 +1373,42 @@ blockquote .person cite {
 	background-color: #ccc;
 }
 
-.mainMediaContainer iframe{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.mainMediaContainer iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
+.videos {
+	display: flex;
+	flex-direction: column;
+}
 
+.video {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 40px;
+}
+
+.treed {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.day {
+	width: 90%;
+	max-width: 800px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.day img {
+	align-self: center;
+	width: 100%;
+}
