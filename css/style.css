@@ -1412,3 +1412,8 @@ blockquote .person cite {
 	align-self: center;
 	width: 100%;
 }
+
+
+.bg-sub{
+	background-color: #5ff4a4;
+}
