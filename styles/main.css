@@ -55,6 +55,11 @@ p {
 	margin-bottom: 15px;
 }
 
+.p-flex{
+    display: flex;
+    align-items: center;
+}
+
 /* header ***********************************/
 .header {
     height: 55px;
@@ -94,6 +99,7 @@ p {
 /* Head ***********************************/
 .head {
 	height: 75vh;
+    width: 100%;
 	position: relative;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
@@ -124,15 +130,19 @@ p {
     width: 100%;
 }
 
+.play-button{
+    cursor: pointer;
+    width: 35px;
+    margin-left: 15px;
+}
+
 
 .head-canvas {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-
 	z-index: -1;
     top: 0;
 }
+
 
 @media only screen and (max-width: 600px) {
 	.head {

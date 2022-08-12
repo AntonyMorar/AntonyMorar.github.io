@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="styles/super-reset.css" />
 		<link rel="stylesheet" href="styles/main.css" />
 	</head>
-	<body>
+	<body onload="main()">
 		<header id="header" class="header">
 			<a href="#header">
 				<div class="image-name">
@@ -28,12 +28,12 @@
 				</div>
 
 				<div class="head-content">
-					<h1>Hi I´m Antony</h1>
+					<div class="p-flex"><h1>Hi I´m Antony</h1> <img class="play-button" src="./assets/images/playIcon.png"/></div>
 					<h2>I´m a game developer from México</h2>
 				</div>
 			</div>
 
-			<canvas class="head-canvas"></canvas>
+			<canvas class="head-canvas" id="head-canvas"></canvas>
 		</div>
 
 		<div class="section porfolio">
@@ -227,6 +227,15 @@
 							<p>Please welcome the first Zoniaz Corporation robot - Kip 1.0!</p>
 							<p>Help Kip to reach the goal, while you learn basic programming logic.</p>
 						</div>
+
+						<div class="porfolio-links">
+							<div class="porfolio-link">
+								<b>Play: </b
+								><a href="./projects/kip-game/index.html" target="_blank"
+									>Play Kip game</a
+								>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -385,6 +394,7 @@
 			</div>
 		</div>
 
+		<script src="./canvas.js"></script>
 		<script src="app.js"></script>
 	</body>
 </html>
