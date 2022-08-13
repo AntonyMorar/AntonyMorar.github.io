@@ -8,6 +8,10 @@
 
 		<link rel="stylesheet" href="styles/super-reset.css" />
 		<link rel="stylesheet" href="styles/main.css" />
+
+		<script src="system.js"></script>
+		<script src="./input.js"></script>
+		<script src="app.js"></script>
 	</head>
 	<body onload="_init()">
 		<header id="header" class="header">
@@ -24,13 +28,19 @@
 		<div class="head">
 			<div class="head-inner">
 				<div class="image-head">
-					<img src="./assets/images/principaImage.png" alt="Main Image" />
+					<!-- <img src="./assets/images/principaImage.png" alt="Main Image" /> -->
 				</div>
 
+				<!--
 				<div class="head-content">
-					<div class="p-flex"><h1>Hi I´m Antony</h1> <img class="play-button" src="./assets/images/playIcon.png"/></div>
+					<div class="p-flex">
+						<h1>Hi I´m Antony</h1>
+						<img id="playFeedGame" class="play-button" src="./assets/images/playIcon.png" />
+					</div>
 					<h2>I´m a game developer from México</h2>
 				</div>
+				-->
+				<img id="playFeedGame" class="play-button" src="./assets/images/playIcon.png" />
 			</div>
 
 			<canvas class="head-canvas" id="head-canvas"></canvas>
@@ -230,10 +240,7 @@
 
 						<div class="porfolio-links">
 							<div class="porfolio-link">
-								<b>Play: </b
-								><a href="./projects/kip-game/index.html" target="_blank"
-									>Play Kip game</a
-								>
+								<b>Play: </b><a href="./projects/kip-game/index.html" target="_blank">Play Kip game</a>
 							</div>
 						</div>
 					</div>
@@ -393,9 +400,5 @@
 				</div>
 			</div>
 		</div>
-
-		<script src="system.js"></script>
-		<script src="./canvas.js"></script>
-		<script src="app.js"></script>
 	</body>
 </html>
