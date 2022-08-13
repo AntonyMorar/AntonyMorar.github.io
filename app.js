@@ -27,10 +27,10 @@ function _draw() {
 }
 
 class Ball extends GameObject {
-	constructor(x, y, radius, dy) {
+	constructor(x, y, radius, dx, dy) {
 		super(x, y);
         this.radius = radius;
-		this.dx = 2;
+		this.dx = dx;
 		this.dy = dy;
 		this.mass = 1;
 		this.friction = 0.95;
@@ -46,14 +46,19 @@ class Ball extends GameObject {
 	}
 
 	update() {
-		// Bounce
-		if (this.position.y + this.radius > canvas.height) {
+		// Bounce bottom
+		if (this.position.y + this.radius + this.dy > canvas.height) {
 			this.dy = -this.dy * this.friction;
 		}else{
             this.dy += Physics.gravity;
         }
 
+		if(this.position.x + this.radius + this.dx > canvas.width || this.position.x - this.dx < 0){
+			this.dx = -this.dx * this.friction;
+		}
+
 		this.position.y += this.dy;
+		this.position.x += this.dx;
 	}
 }
 
@@ -66,7 +71,8 @@ function getRandomBalls(spawnNumber){
 		var x = Random.range(0, canvas.width)
 		var y = Random.range(-40, 40)
 		var dy = Random.range(1,4);
-		ballArray.push(new Ball(x, y, 18,dy))
+		var dx = Random.range(-2, 2);
+		ballArray.push(new Ball(x, y, 18,dx, dy))
 	}
 
 	return this.ballArray;

@@ -142,6 +142,7 @@ p {
 	z-index: -1;
     top: 0;
 	background-color: aliceblue;
+	max-width: 100%;
 }
 
 
