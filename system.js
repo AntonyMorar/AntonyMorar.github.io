@@ -49,6 +49,14 @@ class Vector2{
 
 class Physics{
     constructor(){
-        this.gravity = -9.8
+
+    }
+
+    static gravity = 0.5
+}
+
+class Random{
+    static range(min, max){
+        return Math.floor(Math.random() * (max-min + 1) + min);
     }
 }
