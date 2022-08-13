@@ -140,7 +140,7 @@ class Monster extends GameObject {
 	}
 
 	draw() {
-		ctx.drawImage(this.image, canvas.width / 2 - 203 / 2, canvas.height / 2 - 262 / 2, 203, 262);
+		ctx.drawImage(this.image, canvas.width / 2 - 350, canvas.height / 2 - 262 / 2, 203, 262);
 	}
 }
 
