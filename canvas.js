@@ -21,8 +21,6 @@ addEventListener("mousemove", (event) => {
 addEventListener("resize", (event) => {
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight * 0.75;
-
-    init();
 });
 
 // Utility functions
