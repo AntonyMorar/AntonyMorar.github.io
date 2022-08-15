@@ -7,9 +7,15 @@ function canvasEvents(canvas) {
 }
 
 function gameEvents(game) {
-	document.getElementById("playFeedGame").addEventListener("click", () => {
+	// Play Button
+	var playButton = document.getElementById("playFeedGame");
+
+	playButton.addEventListener("click", () => {
 		if (game.state == "idle") game.startGame();
+		playButton.remove();
 	});
+
+	// Monster
 }
 
 function mouseEvents(mouse) {

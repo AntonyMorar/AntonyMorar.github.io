@@ -58,7 +58,7 @@ class Game {
 
 	startGame() {
 		this.state = "game";
-		ballArray = getRandomBalls(30);
+		ballArray = getRandomBalls(40);
 	}
 }
 
@@ -92,42 +92,29 @@ class Ball extends GameObject {
 		ctx.beginPath();
 		ctx.arc(this.position.x, this.position.y, this.radius, 0, 2 * Math.PI);
 		ctx.fillStyle = this.actualColor;
+		ctx.strokeStyle = "#3f3f3f";
+		ctx.lineWidth = 2;
+		ctx.stroke();
 		ctx.fill();
 		ctx.closePath();
 	}
 
 	update() {
-		//Mouse collide
-		var distanceX = this.position.x - mouse.position.x - this.radius;
-		var distanceY = this.position.y - mouse.position.y - this.radius;
-		var distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-
-		if (distance < this.radius) {
-			this.actualColor = "#000";
+		// Bounce bottom
+		if (this.position.y + this.radius + 2 + this.dy > canvas.height) {
+			this.dy = -this.dy * this.friction * this.mass;
+			this.dx *= this.friction * this.mass;
 		} else {
-			this.actualColor = this.color;
+			this.dy += Physics.gravity;
 		}
 
-		if (!this.grabbed) {
-			// Bounce bottom
-			if (this.position.y + this.radius + this.dy > canvas.height) {
-				this.dy = -this.dy * this.friction;
-				this.dx *= this.friction;
-			} else {
-				this.dy += Physics.gravity;
-			}
-
-			// Bounce left and rigth
-			if (this.position.x + this.radius + this.dx > canvas.width || this.position.x + this.dx < 0) {
-				this.dx = -this.dx * this.friction;
-			}
-
-			this.position.y += this.dy;
-			this.position.x += this.dx;
-		} else {
-			this.position.x = mouse.position.x + this.radius / 2;
-			this.position.y = mouse.position.y + this.radius / 2;
+		// Bounce left and rigth
+		if (this.position.x + this.radius + 2 + this.dx > canvas.width || this.position.x + this.dx < 0) {
+			this.dx = -this.dx * this.friction * this.mass;;
 		}
+
+		this.position.y += this.dy;
+		this.position.x += this.dx;
 	}
 }
 
@@ -140,7 +127,12 @@ class Monster extends GameObject {
 	}
 
 	draw() {
-		ctx.drawImage(this.image, canvas.width / 2 - 350, canvas.height / 2 - 262 / 2, 203, 262);
+		if(canvas.width >= 600){
+			ctx.drawImage(this.image, canvas.width / 2 - 350, canvas.height / 2 - 262 / 2, 203, 262);
+		}else{
+			ctx.drawImage(this.image, canvas.width / 2 - 100, canvas.height / 2 - 220, 203, 262);
+		}
+
 	}
 }
 
@@ -152,8 +144,8 @@ function getRandomBalls(spawnNumber) {
 	for (var i = 0; i < spawnNumber; i++) {
 		var x = Random.range(0, canvas.width);
 		var y = Random.range(-300, 30);
-		var dy = Random.range(0.5, 3);
-		var dx = Random.range(-4, 4);
+		var dy = Random.range(0.3, 4);
+		var dx = Random.range(-5, 5);
 		ballArray.push(new Ball(x, y, 18, dx, dy));
 	}
 
