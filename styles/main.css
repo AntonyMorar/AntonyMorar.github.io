@@ -215,6 +215,30 @@ p {
 	width: 100%;
 }
 
+.head-social{
+	display: flex;
+	margin-top: 10px;
+}
+
+.head-social-icon{
+	width: 30px;
+	height: 30px;
+    background-size: cover;
+	margin-right: 15px;
+}
+
+.head-social-icon:last-child{
+	margin-right: 0px;
+}
+
+.twitter{
+	background-image: url("../assets/images/social/Twitter.png");
+}
+
+.twitter:hover{
+	background-image: url("../assets/images/social/TwitterHover.gif");
+}
+
 
 .arrow{
 	position: absolute;
@@ -436,4 +460,15 @@ p {
 	.portfolio-content {
 		width: 100%;
 	}
+}
+
+
+/* Footer *********************************/
+footer{
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 30px;
 }
