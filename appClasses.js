@@ -4,7 +4,7 @@
  * Main game clases
  * *********************/
 
- class Game {
+class Game {
 	constructor() {
 		// Singleton -----------
 		if (!!Game.instance) return Game.instance;
@@ -80,13 +80,23 @@ class Ball extends GameObject {
 class Monster extends GameObject {
 	constructor(x, y) {
 		super(x, y);
+		this.div = document.getElementById("principalImage");
+		this.width = this.div.width - 40;
+		this.height = this.div.height - 40;
+		if(canvas.width <= 600){
+			this.position.x = canvas.width / 2 - this.width/2;
+			this.position.y = canvas.height / 2  - this.height/2 - 20;
+		}else{
+			this.position.x = canvas.width / 2 - this.width - this.width/2 - 35;
+			this.position.y = canvas.height / 2  - this.height/2;
+		}
 		this.image = new Image();
 		this.image.src = "assets/images/principaImage.png";
 		this.image.alt = "Main Image";
 	}
 
 	draw() {
-        ctx.drawImage(this.image, canvas.width / 2 - 350, canvas.height / 2 - 262 / 2, 203, 265);
+		ctx.drawImage(this.image, this.position.x, this.position.y, this.width, this.height );
 	}
 }
 

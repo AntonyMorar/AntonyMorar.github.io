@@ -13,6 +13,7 @@ function _awake() {
 
 	// Objects
 	monster = new Monster();
+	monsterEvents(monster);
 }
 _awake();
 
