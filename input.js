@@ -43,8 +43,10 @@ function canvasEvents(canvas) {
 
 function gameEvents(game) {
 	// Play Button
-	var playButton = document.getElementById("playFeedGame");
+	var playInstructions1 = document.getElementById("playInstructions1")
+	var playButton = document.getElementById("playButton1");
 	playButton.style.display = "block";
+	playInstructions1.style.display = "block"
 
 	playButton.addEventListener("mouseover", () => {
 		cursor.classList.add("hover");
@@ -55,7 +57,8 @@ function gameEvents(game) {
 
 	playButton.addEventListener("click", () => {
 		if (game.state == "idle") game.startGame();
-		playButton.remove();
+		playButton.style.display = "none"
+		playInstructions1.style.display = "none"
 	});
 }
 
