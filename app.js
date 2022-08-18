@@ -10,10 +10,6 @@ function _awake() {
 	canvas.height = window.innerHeight - 100;
 	ctx = canvas.getContext("2d");
 	canvasEvents(canvas);
-
-	// Objects
-	monster = new Monster();
-	monsterEvents(monster);
 }
 _awake();
 
@@ -46,9 +42,7 @@ function _draw() {
 	requestAnimationFrame(() => _draw());
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-	monster.draw();
 	ballArray.forEach((ball) => {
 		ball.draw();
 	});
 }
-
