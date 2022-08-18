@@ -1,3 +1,10 @@
+/**********************
+ * Antony Morales Rosas
+ * August 2022
+ * Global Classes
+ * Add this script to all js games
+ * *********************/
+
 class GameObject {
 	constructor(x, y) {
 		this.position = {

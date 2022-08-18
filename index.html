@@ -11,13 +11,14 @@
 
 		<script src="system.js"></script>
 		<script src="./input.js"></script>
-		<script src="app.js"></script>
+		<script src="./classes.js"></script>
 	</head>
 	<body onload="_init()">
+		<div id="bg"></div>
 		<header id="header" class="header">
 			<a href="#header">
 				<div class="image-name">
-					<img src="./assets/images/AntonyLogo.png" alt="Antony Morales" />
+					<img src="./assets/images/AntonyLogo.gif" alt="Antony Morales" />
 				</div>
 			</a>
 			<nav class="nav">
@@ -33,7 +34,7 @@
 
 				<div class="head-content">
 					<div class="p-flex">
-						<h1>Hi I´m Antony</h1>
+						<h1>Hi I´m <span class="rainbow">Antony</span></h1>
 						<img id="playFeedGame" class="play-button" src="./assets/images/playIcon.png" />
 					</div>
 					<h2>I´m a game developer from México</h2>
@@ -397,5 +398,6 @@
 				</div>
 			</div>
 		</div>
+		<script src="app.js"></script>
 	</body>
 </html>
