@@ -206,9 +206,9 @@ p {
 }
 
 .image-head {
-	margin-right: 20px;
+	margin-right: 40px;
 	width: 18%;
-	min-height: 170px;
+	min-height: 190px;
 }
 
 .image-head img {
@@ -237,6 +237,14 @@ p {
 
 .twitter:hover{
 	background-image: url("../assets/images/social/TwitterHover.gif");
+}
+
+.youtube{
+	background-image: url("../assets/images/social/Youtube.png");
+}
+
+.youtube:hover{
+	background-image: url("../assets/images/social/YoutubeHover.png");
 }
 
 
