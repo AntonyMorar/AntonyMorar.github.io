@@ -187,15 +187,20 @@ p {
 }
 
 .twitter:hover {
-	background-image: url("../assets/images/social/TwitterHover.gif");
+	filter: brightness(0.5);
+	filter: drop-shadow(3px 3px 2px #ccc);
+	transition: 0.2s;
 }
 
 .youtube {
 	background-image: url("../assets/images/social/Youtube.png");
+
 }
 
 .youtube:hover {
-	background-image: url("../assets/images/social/YoutubeHover.png");
+	filter: brightness(0.5);
+	filter: drop-shadow(3px 3px 2px #ccc);
+	transition: 0.2s;
 }
 
 .arrow {
