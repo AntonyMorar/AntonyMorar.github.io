@@ -51,7 +51,7 @@ body {
 	box-sizing: border-box;
 	font-family: "LeagueSpartan";
 	width: 100%;
-	background-color: #fffcf0;
+	background-color: #f9f6e9;
 	color: rgb(8, 8, 8);
 }
 
@@ -71,6 +71,7 @@ p {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
 }
 
 .header a {
@@ -305,11 +306,13 @@ p {
 /* Section ******************************************/
 .section {
 	width: 100%;
-	margin: 15px 0;
+	margin: 0 auto;
+	margin: 40 0px;
+	margin-top: 40px;
 }
 
 .section-inner {
-	margin: 0 20px;
+	margin: 0 40px;
 }
 
 .section-title {
@@ -325,14 +328,16 @@ p {
 }
 
 /* Porfolio ***********************************/
-.porfolio {
-	width: 100%;
+.porfolio, .project {
+	max-width: 1140px;
+	width: auto;
 }
 
 .portfolio-items{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-evenly;
+	margin-bottom: -40px;
 }
 
 .porfolio-item {
@@ -344,11 +349,6 @@ p {
     border-radius: 16px;
     padding: 16px;
 	flex-direction: column;
-}
-
-.porfolio-inner {
-    max-width: 1240px;
-    margin: 0 auto;
 }
 
 .porfolio-title {
@@ -481,4 +481,61 @@ footer {
 .head-mail{
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+
+/* Project *********************************/
+.project .title-image{
+	width: 400px;
+}
+
+.columns{
+	display: flex;
+	justify-content: center;
+    margin-top: 20px;
+}
+
+.columns .left-col{
+    flex: 1;
+    width: 0;
+    min-width: 0;
+}
+
+.columns .right-col{
+	width: 367px;
+	margin-left: 20px;
+}
+
+.columns .screenshot-list img, .columns video{
+	width: 100%;
+}
+
+.project .video-embed{
+	max-width: 600px;
+	margin-bottom: 10px;
+}
+
+
+.project ul{
+	padding-left: 20px;
+}
+
+.project li{
+	margin-bottom: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+	.columns{
+		flex-wrap: wrap;
+		flex-direction: column-reverse;
+	}
+
+	.columns .left-col{
+		width: 100%;
+	}
+	
+	.columns .right-col{
+		width: 100%;
+		margin-left: 0;
+	}
 }
