@@ -391,6 +391,7 @@ p {
 	display: flex;
     flex-direction: column;
 	flex-grow: 1;
+	width: 100%;
 }
 
 .tags {
@@ -439,13 +440,13 @@ p {
 
 
 @media only screen and (max-width: 1000px) {
-	.porfolio-item {
+	.porfolio-item-link {
 		width: 47%;
 	}
 }
 
 @media only screen and (max-width: 600px) {
-	.porfolio-item {
+	.porfolio-item-link {
 		flex-wrap: wrap;
 		width: 95%;
 	}
