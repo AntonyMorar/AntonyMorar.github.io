@@ -7,7 +7,7 @@ function _awake() {
 	// Canvas
 	canvas = document.getElementById("head-canvas");
 	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight - 100;
+	canvas.height = (window.innerHeight*0.6) - 100;
 	ctx = canvas.getContext("2d");
 	canvasEvents(canvas);
 }
