@@ -412,7 +412,7 @@ p {
 }
 
 .porfolio-links {
-	margin-top: 10px;
+	margin-top: auto;
 	display: flex;
 }
 
