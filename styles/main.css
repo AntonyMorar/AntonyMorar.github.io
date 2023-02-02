@@ -598,6 +598,18 @@ footer {
 	background-image: url("../assets/images/posters/vr2.png");
 }
 
+.p-coverDelivery{
+	background-image: url("../portfolio/images/CoverDelivery.png");
+}
+
+.p-coverKip{
+	background-image: url("../portfolio/images/CoverKip.png");
+}
+
+.p-coverInorDie{
+	background-image: url("../portfolio/images/inOrDie/iod4.png");
+}
+
 .p-section{
 	margin-bottom: 30px;
 	display: flex;
