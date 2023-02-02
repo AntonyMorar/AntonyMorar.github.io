@@ -646,10 +646,12 @@ footer {
 	margin: 0 auto;
 	margin-bottom: 20px;
 	padding: 2px;
+	
 }
 
 .p-image img, .p-image video{
 	width: 100%;
+	border-radius: 16px;
 }
 
 .p-scpes-type{
@@ -675,6 +677,7 @@ footer {
 	width: 100%;
 	margin: 0 auto;
 	transition: 0.2s;
+	border-radius: 16px;
 }
 
 .p-galery-item:hover img{
