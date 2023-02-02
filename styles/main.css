@@ -682,3 +682,59 @@ footer {
 	transition: 0.2s;
 }
 
+@media only screen and (max-width: 600px) {
+	.p-title-container{
+		flex-direction: column;
+	}
+
+	.p-title-info{
+		margin-bottom: 10px;
+	}
+
+	.p-title-bar{
+		margin-bottom: 10px;
+	}
+
+	.p-title-container h1{
+		margin-bottom: 10px;
+	}
+
+	.p-description{
+		margin-left: 0;
+		text-align: center;
+	}
+
+	.p-section{
+		flex-wrap: wrap;
+	}
+
+	.p-cover{
+		height: 200px;
+	}
+	
+	.p-about{
+		width: 100%;
+		padding-right: 0px;
+	}
+	
+	.p-scpes{
+		width: 100%;
+	}
+
+	.p-sectionL, .p-sectionR{
+		width: 100%;
+	}
+	
+	.p-sectionL{
+		margin-right: 0px;
+	}
+	
+	.p-sectionR{
+		margin-left: 0px;
+	}
+
+	.p-galery-item{
+		width: 100%;
+	}
+	
+}
