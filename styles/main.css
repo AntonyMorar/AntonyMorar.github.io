@@ -610,6 +610,10 @@ footer {
 	background-image: url("../portfolio/images/inOrDie/iod4.png");
 }
 
+.p-coverMiniMaik{
+	background-image: url("../portfolio/images/CoverMinimaik.png");
+}
+
 .p-section{
 	margin-bottom: 30px;
 	display: flex;
@@ -668,7 +672,7 @@ footer {
 .p-galery-item{
 	padding: 2px;
 	cursor: zoom-in;
-	width: 25%;
+	width: 50%;
 	display: inline-block;
 }
 
