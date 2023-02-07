@@ -192,6 +192,10 @@ p,span {
 	background-image: url("../assets/images/social/Twitter.png");
 }
 
+.itchio{
+	background-image: url("../assets/images/social/itchio.png");
+}
+
 .twitter:hover {
 	filter: brightness(0.5);
 	filter: drop-shadow(3px 3px 2px #ccc);
